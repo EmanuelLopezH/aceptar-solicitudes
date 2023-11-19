@@ -7,6 +7,11 @@ import { useState, useEffect } from "react";
 export default function Requests() {
   const [selectedUser, setSelectedUser] = useState(null);
   const [users, setUsers] = useState([]);
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     fetch("https://reqres.in/api/users")
@@ -16,7 +21,11 @@ export default function Requests() {
 
   const handleUserClick = (user) => {
     setSelectedUser(user);
+    setIsOpen(true);
   };
+
+
+
   return (
     <div>
       <Header></Header>
@@ -39,8 +48,12 @@ export default function Requests() {
             </li>
           ))}
         </ul>
-        {selectedUser && (
-          <div className="info">
+        {selectedUser && isOpen && (
+           
+          <div>
+            {/*<button>messi</button>*/}
+            <div className="info">
+            <button id="equis" onClick={handleClose}>X</button>
             <h1>$0.00</h1>
             <p>{selectedUser.first_name}</p>
             <h2>Descripción:</h2>
@@ -55,9 +68,9 @@ export default function Requests() {
               <button className="rej-btn2">Rechazar</button>
             </div>
           </div>
+          </div>
         )}
       </div>
     </div>
   );
 }
-<div></div>;
