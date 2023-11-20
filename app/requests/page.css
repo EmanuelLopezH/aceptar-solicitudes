@@ -26,10 +26,18 @@ body{
     margin: 20px;
     justify-content: space-around;
     align-items: center;
+    width: 220px;
 }
+
+.users img{
+    margin-left: 5px;
+}
+
 .users p{
-    width: 30%;
+    width: 50%;
+    margin: 10px 0px 10px 10px;
 }
+
 .acp-btn{
     margin-top: 10px;
     width: 30px;
@@ -37,6 +45,7 @@ body{
     background-color: green;
     border-radius: 100%;
     border-color: green;
+    margin-right:0.5em;
 }
 .rej-btn{
     margin-top: 10px;
@@ -45,6 +54,8 @@ body{
     background-color: red;
     border-radius: 100%;
     border-color: red;
+    margin-right:0.5em;
+
 }
 .info{
     padding: 20px;
@@ -61,6 +72,13 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
+
+#equis{
+    border-radius: 100%;
+    padding: 1em;
+    margin-left: 1em;
+}
+
 .btns{
     width: 100%;
     display: flex;
@@ -73,6 +91,7 @@ body{
     background-color: green;
     color: white;
     border-color: green;
+    
 }
 .rej-btn2{
     width: 200px;
