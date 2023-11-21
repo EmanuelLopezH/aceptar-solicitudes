@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Map from "@/components/Map";
 import "./page.css";
+import GeneralButton from "@/components/GeneralButton";
 
 export default function Summary() {
   const [stars, setStars] = useState([false, false, false, false, false]);
@@ -21,6 +22,7 @@ export default function Summary() {
     <div>
       <Header></Header>
       <Map></Map>
+      <GeneralButton></GeneralButton>
       <div className="summary">
         <h2>Información de su viaje</h2>
         <div className="summary-info">
@@ -29,13 +31,14 @@ export default function Summary() {
               {new Date().toLocaleDateString()}{" "}
               {new Date().toLocaleTimeString()}
             </p>
-            <h2>Cop$ 18.000</h2>
+            <br />
+            <h2>COP$ 18.000</h2>
           </div>
           <div className="summary-info-item">
             <div id="user-img">
               <img src={"/user-active.svg"} alt="" width={"80"} height={"80"} />
             </div>
-
+            <br />
             <p>Maria Gomez</p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import "./page.css";
-import SwitchButton from "@/components/SwitchButton";
+import GeneralButton from "@/components/GeneralButton";
 import Header from "@/components/Header";
 import Map from "@/components/Map";
 
@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Header></Header>
       <Map></Map>
-      <SwitchButton></SwitchButton>
+      <GeneralButton></GeneralButton>
     </div>
   );
 }
