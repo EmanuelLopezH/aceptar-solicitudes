@@ -1,6 +1,8 @@
 "use client";
 import Header from "@/components/Header";
 import Map from "@/components/Map";
+import GeneralButton from "@/components/GeneralButton";
+import Link from "next/link";
 import "./page.css";
 import { useState, useEffect } from "react";
 
@@ -60,6 +62,7 @@ export default function Requests() {
     <div>
       <Header></Header>
       <Map></Map>
+      <GeneralButton></GeneralButton>
       <div className="">
         <ul className="panel-requests">
           {users?.map((user) => (
@@ -93,7 +96,7 @@ export default function Requests() {
                   Su viaje le tomará aproximadamente {estimatedTime.toFixed(0)} minutos y {estimatedDistance.toFixed(1)} km de distancia.
                 </p>
                 <div className="btns">
-                  <button className="acp-btn2" onClick={() => handleAccept(selectedUser)}>Aceptar</button>
+                  <Link href={"/summaryDriver"}><button className="acp-btn2" onClick={() => handleAccept(selectedUser)}>Aceptar</button></Link>
                   <button className="rej-btn2" onClick={() => handleReject(selectedUser)}>Rechazar</button>
                 </div>
               </div>
